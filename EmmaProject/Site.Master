@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EmmaProject.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/EmmaPj.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://kit.fontawesome.com/220fe8c60c.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url('../Images/Lawn.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: "Lato", sans-serif;
+        }
+
+        .foot {
+            position: fixed;
+            right: 0px;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #343a40;
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+        }
+
+        footer, .footer {
+            font-size: 20px;
+        }
+
+        .vert {
+            border-right: 2px solid #818181;
+            height: 60px;
+        }
+
+        @media (max-width: 767px) {
+            footer {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body class="body">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+            <div class="container">
+                <a href="Default.aspx">
+                    <img src="Images/Logo.png" alt="Company Logo" class="Mlogo" /></a>
+                <a class="navbar-brand" runat="server" href="~/">Emma Engines</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1" id="nav" style="position: absolute !important; right: 60px;">
+
+                        <div class="vert" style="color: #818181; font-size: 25px;"></div>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About"><i class="fa-solid fa-info"></i>About</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div id="sidebar" class="sidenav" style="width: 0; position: fixed; z-index: 1; top: 0; left: 0; background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top: 60px;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s;">&times; Close</a>
+            <a href="Default.aspx" style="padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s;">Home</a>
+            <a href="Customerr.aspx" class="menu-link" style="padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s;">Customers</a>
+            <a href="Employees.aspx" class="menu-link" style="padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.3s;">Employees</a>
+           
+
+        </div>
+
+
+
+
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+        </asp:PlaceHolder>
+
+
+        <script src="/Content/sidebar.js"></script>
+
+
+    </form>
+    <div class="foot">
+
+        <h2 class="footer">&copy;  <%: DateTime.Now.Year %> Emma Engines</h2>
+    </div>
+    <script type="text/javascript">
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

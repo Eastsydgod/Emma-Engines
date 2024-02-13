@@ -1,0 +1,54 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+body {
+    background-image: url('../Images/Lawn.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Lato", sans-serif;
+}
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+footer, p{
+    position:absolute;
+    bottom: 700px;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.body-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+

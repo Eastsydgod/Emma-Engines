@@ -1,0 +1,176 @@
+﻿body {
+    background-image: url('../Images/Lawn.jpg') !important;
+    
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.body-content {
+    flex: 1;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+.logo {
+    padding-bottom: 20px;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.Mlogo {
+    width: 150px;
+    margin-right: 30px;
+    border: 9px solid white;
+}
+
+
+#nav {
+    position:absolute;
+    right: 70px;
+}
+
+.third-section {
+    border-top: 3px solid #000000;
+    border-bottom: 2px solid #000000;
+    display: flex;
+    height: 400px;
+    justify-content: space-around;
+}
+
+    .third-section div {
+        border: solid rgba(0, 0, 0, 0.815) 5px;
+        border-radius: 10%;
+        margin: 20px 0;
+        margin-top: 90px;
+        max-height: 120px;
+        min-width: 130px;
+        padding: 20px;
+    }
+
+        .third-section div i {
+            margin-left: 45px;
+        }
+
+.third-section-icon {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    height: auto;
+    width: auto;
+}
+
+    .third-section-icon:hover {
+        color: #5e5e5e;
+    }
+
+.icon-large,
+.second-icon-large {
+    font-size: 3.5em;
+}
+
+/****************Login***********************/
+.auto-style1 {
+    height: 550px;
+    width: 803px;
+    border: 2px solid black;
+    margin: 0 auto;
+    font-weight: bold;
+    background-color: #336699;
+    background-image: none;
+    margin-top: 20px;
+    top: 84px;
+}
+
+.auto-style2 {
+    height: 34px;
+}
+
+.auto-style3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 98%;
+    font-size: 1rem;
+    color: var(--bs-accordion-btn-color);
+    text-align: left;
+    border-radius: 0;
+    transition: none;
+    left: 8px;
+    top: 6px;
+    height: 262px;
+    border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    background-color: var(--bs-accordion-btn-bg);
+}
+
+.auto-style4 {
+    width: 783px;
+    height: 51px;
+    margin-top: 32px;
+    margin-left: 9px;
+}
+
+.auto-style5 {
+    display: block;
+    width: 473px;
+    margin-left: 160px;
+    text-align: center;
+}
+
+.auto-styleR {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 473px;
+    margin-left: 160px;
+    text-align: center;
+    padding: 10px;
+}
+
+.div-pad{
+    margin-top: 10px;
+}
+
+.auto-style6 {
+    height: 705px;
+}
+
+
+.customer-details-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+    background-color: #3366CC;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.form-view {
+    width: 100%;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+}
+
+
+
+/***************************************/
+
